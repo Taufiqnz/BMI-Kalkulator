@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;0,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .navbar {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        .card {
+            border: none;
+            background-color: rgba(0, 0, 0, 0.02);
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-header {
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 15px 15px 0 0;
+        }
+
+        .form-control {
+            border-radius: 10px;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+            border-radius: 10px;
+        }
+    </style>
+    <title>Body Mass Index Calculator</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand text-white" href="#">BMI</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid mt-4">
+        <p class="m-3 text-center">Indeks massa tubuh (IMT) atau indeks Quetelet merupakan proksi heuristik untuk
+            lemak tubuh manusia berdasarkan berat badan seseorang dan tinggi. IMT tidak benar-benar mengukur persentase
+            lemak tubuh. Itu ditemukan antara tahun 1830 dan 1850 oleh polymath asal Belgia Adolphe Quetelet selama
+            pengembangan "fisika sosial".
+
+            Indeks massa tubuh (IMT) adalah metode yang digunakan untuk menentukan status gizi seseorang. Pada usia
+            remaja, penentuan ini didasarkan pada perhitungan IMT yang kemudian dicocokkan dengan gafik pertumbuhan
+            sesuai usia dan jenis kelamin. Standar normal ideal yang digunakan untuk orang dewasa berusia di atas 20
+            tahun adalah IMT antara 20 hingga 25,0. Seseorang dikatakan memiliki berat badan berlebih jika IMT antara
+            25,0 hingga 29,9. Jika IMT < 20 berarti berat badan kurang dan IMT ≥30 berarti obesitas. Jika IMT seseorang
+                berada di luar rentang IMT yang dinyatakan sehat, risiko kesehatan mereka bisa meningkat secara
+                signifikan. Berat tubuh berlebih dapat berdampak pada berbagai kondisi kesehatan, seperti diabetes tipe
+                2, tekanan darah tinggi dan penyakit kardiovaskular. Sementara berat tubuh yang terlalu rendah dapat
+                meningkatkan risiko terjadinya malnutrisi, osteoporosis dan anemia. IMT tidak mengukur lemak tubuh
+                secara langsung dan tidak pula mempertimbangkan usia, jenis kelamin, etnis atau massa otot pada orang
+                dewasa.</p>
+    </div>
+
+    <div class="container mt-4">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header text-center">
+                        Masukkan Berat Badan dan Tinggi Badan Anda : )
+                    </div>
+                    <div class="card-body">
+                        <form onsubmit="return false;" class="row g-3">
+                            <div class="mb-3 col-auto">
+                                <label for="beratValues" class="form-label">Berat Badan</label>
+                                <input id="beratValues" type="number" class="form-control form-control-sm">
+                                <div class="form-text fst-italic">Berat badan (kg)</div>
+                            </div>
+
+                            <div class="mb-3 col-auto">
+                                <label for="tinggiValues" class="form-label">Tinggi Badan</label>
+                                <input id="tinggiValues" type="number" class="form-control form-control-sm">
+                                <div class="form-text fst-italic">Tinggi badan (cm)</div>
+                            </div>
+                        </form>
+
+                        <p id="result" class="text-center"></p>
+
+                        <button onclick="hitung()" class="btn btn-primary btn-block">Hitung BMI</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
